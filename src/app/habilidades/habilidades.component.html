@@ -1,0 +1,13 @@
+<div id="habilidades" class="habilidades">
+    <h1>Habilidades</h1>
+    <div class="carousel" #carousel [ngStyle]="estiloCarousel">
+        <div class="carousel-item" id="item{{i}}" #item{{i}} *ngFor="let slide of slides; let i = index" (mouseover)="pause()" (mouseout)="play()">
+            <img id="img{{i}}" #img{{i}} src={{slide.img}} alt={{slide.nombre}}/>
+            <div class="info-img">
+                <p>{{slide.nombre}}</p>
+            </div>
+        </div>
+    </div>
+    <p class="btn-derecha btn" (click)="next()">></p>
+    <p class="btn-izquierda btn" (click)="prev()"><</p>
+</div>
