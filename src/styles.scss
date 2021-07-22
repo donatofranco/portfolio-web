@@ -1,1 +1,35 @@
-/* You can add global styles to this file, and also import other style files */
+$blacky: #1e1e1e;
+
+* {
+    margin: 0;
+    font-family: "Lucida Console", "Courier New", monospace;
+}
+
+html {
+    width: 100%;
+    font-size: 62.5%;
+    background-image: linear-gradient(180deg, $blacky, 75%, rgb(18, 63, 63));
+    scroll-behavior: smooth;
+}
+
+//cambio scrollbar
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* 'via' */
+  ::-webkit-scrollbar-track {
+    background: $blacky; 
+  }
+   
+  /* bar */
+  ::-webkit-scrollbar-thumb {
+    background: #888; 
+  }
+  
+  /* bar on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
