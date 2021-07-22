@@ -1,0 +1,141 @@
+$blacky: #1e1e1e;
+$blackyOp: #1e1e1e3b;
+
+.nav{
+    width: 100%;  
+    display: flex;
+    margin: 0;
+    border-bottom-right-radius: 35px;
+    justify-content: space-between;
+    background-color: rgba(255, 255, 255, .35);  
+    backdrop-filter: blur(5px);
+}
+
+.nav-title{
+    display: flex;
+    margin-left: 2%;
+    align-self: center;
+    font-weight: bold;
+    font-size: 2.5em;
+    border-right: 2px solid rgba(255,255,255,.75);
+    overflow: hidden;
+    cursor: pointer;
+    animation: typewriter 4s steps(44) 1s 1 normal both,
+              blinkTextCursor 500ms steps(44) infinite normal;
+}
+
+.nav-title p{
+    color: $blacky;
+    text-shadow: 2px 2px 2px #fff, 0 0 0 #000, -1px -1px 0px rgba(255, 255, 255, 0.7);
+    white-space: nowrap;
+}
+
+.nav-btns{
+    display: flex;
+    margin-right: 2%;
+    justify-content: flex-end;
+}
+
+a{
+    text-decoration: none;
+}
+
+.nav-btn{
+    transition: 0.3s 0.1s;
+    display: flex;
+    margin: 0.3em;
+    padding: 0.5em;
+    color: $blacky;
+    border: none;
+    border-radius: 7.5px;
+    cursor: pointer;
+    font-weight: bold;
+    background-color: rgba(255, 255, 255, 0.15);  
+    backdrop-filter: blur(5px);
+}
+
+.nav-btn:hover{
+    transform: scale(1.1, 1.1);
+    color: whitesmoke;
+    background-color: rgba(255, 255, 255, .15);  
+    backdrop-filter: blur(0px);
+    box-shadow: 0px 2px 8px 1px $blacky;
+}
+
+//animaciones
+
+@keyframes typewriter{
+    from{width: 0;}
+    to{width: 8.15em;}
+}
+
+@keyframes blinkTextCursor{
+from{border-right-color: rgba(255,255,255,.75);}
+to{border-right-color: transparent;}
+}
+
+.nav-menu{
+    display: none;
+    visibility: hidden;
+}
+
+//media queries
+
+@media (max-width: 510px) {
+    .nav{
+        border-bottom-right-radius: 0px;
+    }
+
+    .nav-btns{
+        display: none;
+    }
+
+    .nav-menu{
+        display: flex;
+        visibility: visible;
+        margin-right: 4%;
+        justify-content: flex-end;
+        align-self: center;
+        font-size: 2em;
+    }
+
+    .nav-menu i{
+        cursor: pointer;
+    }
+    
+    .btns-menu{
+        position: absolute;
+        right: 0;
+        top: 0;
+        background-color: rgba(255, 255, 255, .35);  
+        backdrop-filter: blur(5px);
+        width: 100%;
+        left: 100%;
+        transition: all 0.5s;
+    }
+
+    .btn-menu{
+        display: flex;
+        justify-content: center;
+        color: $blacky;
+    }
+
+    .btn-menu:hover{
+        background-color: rgba(255, 255, 255, .50);  
+        backdrop-filter: blur(5px);
+        cursor: pointer;
+    }
+
+    .exit-menu{
+        position: absolute;
+        right: 4%;
+        top: 0;
+        font-size: 1.2em;
+    }
+    .fa-bars{
+        color: $blacky;
+    }
+    .fa-times{
+        color: $blacky;
+    }
+ }
