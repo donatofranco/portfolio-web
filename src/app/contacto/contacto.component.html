@@ -1,0 +1,8 @@
+<div #contacto id="contacto" class="contacto">
+    <h1>Contacto</h1>
+    <div class="contacto-content">
+        <div class="content-item" *ngFor="let media of mediaImg; let i = index">
+            <a href={{media.url}}><i class={{media.class}}></i></a>
+        </div>
+    </div>
+</div>
