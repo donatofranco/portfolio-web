@@ -1,0 +1,20 @@
+$blacky: #1e1e1e;
+
+.foot{
+    display: flex;
+    height: 20px;
+    justify-content: center;
+    background-color: $blacky;
+    padding: 1em;
+    color: whitesmoke;
+    font-size: 1.2em;
+}
+
+.foot p{
+    padding: 2;
+}
+
+.foot:hover span{
+    color:red;
+    font-size: 1.2em;
+}
