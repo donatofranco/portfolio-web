@@ -1,0 +1,117 @@
+$blacky: #1e1e1e;
+$blackyOp: rgba(30, 30, 30, 0.3);
+$cyan: #00FFFF;
+$cyanOp: rgba(0, 255, 255, 0.3);
+$ivory: #FFFFF0;
+
+.presentacion{
+    display: flex;
+    background-image: url(../../assets/img/code3.png);
+    background-size: cover;
+    padding: 6em 3em 6em 3em;
+    box-shadow: 0 0 5px 5px $blacky inset;
+    border-radius: 10px;
+}
+
+.presentacion-img{
+    display: flex;
+    width: 40%;
+    height: 100%;
+    justify-content: flex-end;
+}
+
+.presentacion-img img{
+    display: flex;
+    width: 50%;
+    height: 50%;    
+    border-radius: 100%;
+    box-shadow: 0px 0px 5px 5px black;
+}
+
+.presentacion-info{
+    align-self: center;
+    width:55%;
+    color: $ivory;
+    padding: 1em;
+    text-shadow: 2px 2px 0px $blacky, 1px 1px 2px $blacky, -1px -1px 2px $cyan;
+}
+
+.presentacion-info p{
+    font-weight: bold;
+    font-size: 2.5em;
+}
+
+.container-btn{
+    margin: 2em;
+    display: flex;
+    justify-content: center;
+}
+
+.cv-btn{
+    display: inline;
+    color: $ivory;
+    padding: 0.5em;
+    font-size: 3em;
+    border: solid $blacky 3px;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.cv-btn:hover{
+    color: $blacky;
+    border-color: $cyan;
+    background-color: $cyanOp;
+    text-shadow: 2px 2px 0px $ivory, 1px 1px 2px $ivory, -1px -1px 2px $cyan;
+    box-shadow: 0 0 15px 0px $cyan;
+    transform: scale(1.1);
+}
+
+@media (max-width: 1024px) {
+    .presentacion{
+        flex-direction:column;
+        padding-bottom: 2em;
+    }
+
+    .presentacion-img{
+        width: 100%;
+        justify-content: center;
+    }
+
+    .presentacion-img img{
+        width: 25%;
+    }
+
+    .presentacion-info{
+        width: 90%;
+    }
+ }
+
+ @media (max-width: 768px) { 
+    .presentacion-img img{
+        width: 50%;
+    }
+    .presentacion-info p{
+        font-size: 2em;
+        text-align: center;
+    }
+ }
+
+ @media (max-width: 480px) {
+    .presentacion-img img{
+        width: 80%;
+    }
+
+    .presentacion-info{
+        width: 100%;
+    }
+
+    .presentacion-info p{
+        font-size: 2.2em;
+        text-align: center;
+    }
+    .cv-btn{
+        font-size: 2.2em;
+    }
+ }
