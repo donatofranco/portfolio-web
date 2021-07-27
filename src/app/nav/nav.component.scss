@@ -2,25 +2,27 @@ $blacky: #1e1e1e;
 $blackyOp: #1e1e1e3b;
 
 .nav{
-    width: 100%;  
+    width: 100vw;  
     display: flex;
     margin: 0;
-    border-bottom-right-radius: 35px;
+    height: 7vh;
+    border-bottom-right-radius: 5vh;
     justify-content: space-between;
     background-color: rgba(255, 255, 255, .35);  
     backdrop-filter: blur(5px);
+    z-index: 10;
 }
 
 .nav-title{
     display: flex;
-    margin-left: 2%;
+    margin-left: 1%;
     align-self: center;
     font-weight: bold;
-    font-size: 2.5em;
+    font-size: 5vh;
     border-right: 2px solid rgba(255,255,255,.75);
     overflow: hidden;
     cursor: pointer;
-    animation: typewriter 4s steps(44) 1s 1 normal both,
+    animation: typewriter 4s steps(13, start) 1s infinite alternate,
               blinkTextCursor 500ms steps(44) infinite normal;
 }
 
@@ -32,8 +34,9 @@ $blackyOp: #1e1e1e3b;
 
 .nav-btns{
     display: flex;
-    margin-right: 2%;
+    margin-right: 1vw;
     justify-content: flex-end;
+    align-items: center;
 }
 
 a{
@@ -43,11 +46,14 @@ a{
 .nav-btn{
     transition: 0.3s 0.1s;
     display: flex;
-    margin: 0.3em;
-    padding: 0.5em;
+    font-size: 3vh;
+    height: 5vh;
+    align-items: center;
+    margin: 0.5vw;
+    //padding: 0.5em;
     color: $blacky;
     border: none;
-    border-radius: 7.5px;
+    border-radius: 2vh;
     cursor: pointer;
     font-weight: bold;
     background-color: rgba(255, 255, 255, 0.15);  
@@ -55,7 +61,7 @@ a{
 }
 
 .nav-btn:hover{
-    transform: scale(1.1, 1.1);
+    transform: scale(1.05);
     color: whitesmoke;
     background-color: rgba(255, 255, 255, .15);  
     backdrop-filter: blur(0px);
@@ -81,7 +87,7 @@ to{border-right-color: transparent;}
 
 //media queries
 
-@media (max-width: 510px) {
+@media (max-width: 768px) {
     .nav{
         border-bottom-right-radius: 0px;
     }
@@ -97,6 +103,7 @@ to{border-right-color: transparent;}
         justify-content: flex-end;
         align-self: center;
         font-size: 2em;
+        font-weight: bold;
     }
 
     .nav-menu i{
@@ -118,6 +125,7 @@ to{border-right-color: transparent;}
         display: flex;
         justify-content: center;
         color: $blacky;
+        padding: 0.5em;
     }
 
     .btn-menu:hover{
@@ -138,4 +146,10 @@ to{border-right-color: transparent;}
     .fa-times{
         color: $blacky;
     }
+ }
+
+ @media (max-width: 480px) {
+     .nav-title{
+         font-size: 4vh;
+     }
  }

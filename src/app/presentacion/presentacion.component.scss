@@ -8,41 +8,46 @@ $ivory: #FFFFF0;
     display: flex;
     background-image: url(../../assets/img/code3.png);
     background-size: cover;
-    padding: 6em 3em 6em 3em;
     box-shadow: 0 0 5px 5px $blacky inset;
-    border-radius: 10px;
+    border-radius: 2vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
 }
 
 .presentacion-img{
     display: flex;
-    width: 40%;
-    height: 100%;
-    justify-content: flex-end;
+    position: relative;
+    justify-content: center;
+    width: 40vw; 
+    margin: 0em 1vw 0em 1vw;
+    animation:  movePhoto 1s 0.2s;/*,
+                floatingPhoto 2s infinite 1.5s ease-in-out alternate,
+                moveShadow 2s infinite 1.5s ease-in-out alternate;*/
 }
 
 .presentacion-img img{
     display: flex;
-    width: 50%;
-    height: 50%;    
+    width: 100%;
+    height: 100%;    
     border-radius: 100%;
-    box-shadow: 0px 0px 5px 5px black;
+    //box-shadow: 0px 0px 5px 5px black;
 }
 
 .presentacion-info{
-    align-self: center;
-    width:55%;
     color: $ivory;
-    padding: 1em;
     text-shadow: 2px 2px 0px $blacky, 1px 1px 2px $blacky, -1px -1px 2px $cyan;
+    width: 50vw;
 }
 
 .presentacion-info p{
+    text-align: center;
     font-weight: bold;
-    font-size: 2.5em;
+    font-size: 4vh;
 }
 
 .container-btn{
-    margin: 2em;
+    padding-top: 15vh;
     display: flex;
     justify-content: center;
 }
@@ -50,8 +55,9 @@ $ivory: #FFFFF0;
 .cv-btn{
     display: inline;
     color: $ivory;
-    padding: 0.5em;
-    font-size: 3em;
+    padding: 1.5vw;
+    font-size: 5vw;
+    letter-spacing: 8px;
     border: solid $blacky 3px;
     border-radius: 15px;
     backdrop-filter: blur(10px);
@@ -68,50 +74,79 @@ $ivory: #FFFFF0;
     transform: scale(1.1);
 }
 
+@keyframes movePhoto {
+    0%{left: -100%;}
+    100%{left: 0%;}
+}
+
+@keyframes floatingPhoto {
+    0%{top: 0vh;}
+    100%{top: 5vh;}
+}
+
+@keyframes moveShadow {
+    0%{box-shadow: 0px 0px 5px 5px black;border-radius: 100%;}
+    100%{box-shadow: 0px 5px 5px 5px black;border-radius: 100%;}
+}
+
 @media (max-width: 1024px) {
     .presentacion{
-        flex-direction:column;
-        padding-bottom: 2em;
+        display: block;
     }
 
     .presentacion-img{
-        width: 100%;
-        justify-content: center;
+        margin: 0;
+        padding-top: 7.6vh;
+        width: 100vw;
+        margin-bottom: 2vh;
     }
 
     .presentacion-img img{
-        width: 25%;
+        width: 40vw;
     }
 
     .presentacion-info{
-        width: 90%;
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        width: 90vw;
+    }
+    .container-btn{
+        padding-top: 2vh;
     }
  }
 
  @media (max-width: 768px) { 
     .presentacion-img img{
-        width: 50%;
+        width: 60%;
     }
     .presentacion-info p{
-        font-size: 2em;
+        font-size: 3.2vh;
         text-align: center;
+    }
+    .container-btn{
+        padding-top: 5vh;
+    }
+    .cv-btn{
+        font-size: 8vw;
+        letter-spacing: 6px;
     }
  }
 
  @media (max-width: 480px) {
     .presentacion-img img{
-        width: 80%;
+        width: 90%;
     }
 
     .presentacion-info{
-        width: 100%;
+        width: 95vw;
     }
 
     .presentacion-info p{
-        font-size: 2.2em;
+        font-size: 3.2vh;
         text-align: center;
     }
     .cv-btn{
-        font-size: 2.2em;
+        padding: 1.5vh;
     }
  }

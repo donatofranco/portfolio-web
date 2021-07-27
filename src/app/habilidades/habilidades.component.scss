@@ -1,118 +1,150 @@
 $ivory: #FFFFF0;
 
 .habilidades{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
     color: $ivory;
     background-color: rgba(0, 0, 0, 0);
     overflow: hidden;
-    padding-top: 2em;
-    margin-left: 10%;
-    margin-right: 10%;
     position: relative;
+    height: 100vh;
 }
 
 .habilidades h1{
+    display: flex;
+    position: absolute;
     text-align: center;
-    padding: 1em;
-    font-size: 3em;
+    top: 7.5vh;
+    align-self: center;
+    font-size: 7vh;
+    text-shadow: 0px 0px 5px #0ff;
 }
 
 .carousel {
     display: flex;
-    position: relative;
+    padding-top: 20vh;
     width: 200%;
-    margin-left: -33.5%;
+    margin: auto;
+    margin-left: -33.333vw;
 } 
 
 .carousel-item {
-    display: flex;
-    width: 100%;
-    height: 100%;
-    margin: 0.833%;
-    justify-self: center;
+    
 }
 
 .carousel-item img{
-    width: 100%;
-    height: 100%;
-    border-radius: 15px;
+    width: 33.333vw;
+    height: 33.333vw;   
+    object-fit: contain;
     transition: 0.3s 0.15s;
 }
 
 .info-img{
-    position: relative;
     display: flex;
-    left: -50%;
     justify-content: center;
-    align-content: center;
+    position: relative;
+    top:-50%;
+    transform: translateY(-50%);
     opacity: 0;
     transition: 0.5s 0.3s;
 }
 
 .info-img p{
-    position: relative;
-    left: -50%;
-    top: 45%;
     text-align: center;
-    font-size: 1.5em;
+    font-size: 1.8vw;   
     font-weight: bold;
 }
 
 .carousel-item:hover .info-img{
     opacity: 1;
+    transform: translateY(-5vh);
 }
 
 .carousel-item:hover img{
     box-shadow: 0 0 5px 0px whitesmoke;
     opacity: 0.3;
-    transform: scale(1.02, 1.02);
+    transform: scale(0.9, 0.9) translateY(-5vh);
+}
+
+.carousel-item img:hover .btn{
+    opacity: 0;
+}
+
+.btn:hover{
+    opacity: 1;
+    background: rgba(0, 0, 0, 0.75);
 }
 
 .btn{
     position: absolute;
-    width: 0em;
-    height: 0em;
-    background: rgba(255, 255, 255, 0.7);
-    top:57.5%;
-    transform: translateY(-50%);
-    font-family: monospace;
-    font-size: 6em;
-    font-weight: bold;
-    text-align: center;
-    cursor: pointer;
+    display: flex;
+    z-index: 1;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.0);
+    height: 33.333vw;
+    font-size: 8vw;
+    opacity: 0.5;
+    transition: 0.5s 0.3s;
 }
 
 .btn-derecha{
-    right: 30px;
+    right: 0px;
 }
 
 .btn-izquierda{
     left: 0px;
 }
 
-.btn:hover{
+i{
+    cursor: pointer;
+}
+
+i:hover{
     transform: scale(1.05, 1.05);
-    text-shadow: -2px -2px 2px rgb(0, 0, 0, .7);
+    text-shadow: 0px 4px 4px rgba(0, 255, 255, 0.7);
+}
+
+@media (max-width: 1024px) {
+    .habilidades{
+        //height: 700;
+    }
+    .habilidades h1{
+        //font-size: 5em;
+    }
+}
+
+@media (max-width: 768px) {
+    .carousel {
+        width: 300%;
+        margin-left: -50vw;
+    }
+    .carousel-item img{
+        width: 50vw;
+        height: 50vw;   
+    }
+    .btn{
+        height: 50vw;
+    }
 }
 
 @media (max-width: 480px) {
-    .habilidades{
-        margin-left: 2.5%;
-        margin-right: 2.5%;
+    .habilidades h1{
+        font-size: 12.5vw;
     }
-    .carousel{
-        flex-wrap: wrap;
-        width: 100%;
-        margin: 0;
-        justify-content: center;
+    .carousel {
+        width: 600%;
+        margin-left: -100vw;
     }
-    .carousel-item{
-        width: 25%;
-        height: 25%;
-    }
-    .info-img p{
-        font-size: 1em;
+    .carousel-item img{
+        width: 100vw;
+        height: 100vw;   
     }
     .btn{
-        display: none;
+        height: 100vw;
+    }
+    .info-img p{
+        position: relative;
+        font-size: 3.5vw;
     }
 }

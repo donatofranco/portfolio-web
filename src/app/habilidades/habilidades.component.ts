@@ -7,6 +7,7 @@ import { AfterViewInit, Component, ElementRef, ViewChild, HostListener } from '@
 })
 export class HabilidadesComponent implements AfterViewInit {
   isPaused = false;
+  xActual:number = 0;
 
   slides = [
     {img: "../../assets/img/html.png", nombre: "HyperText Markup Language"},
@@ -37,57 +38,121 @@ export class HabilidadesComponent implements AfterViewInit {
     let items = this.carousel.nativeElement.querySelectorAll('.carousel-item');
     let ultimo = items[items.length -1];
     this.carousel.nativeElement.insertAdjacentElement('afterbegin', ultimo);
-    /*setInterval(()=>{
+    setInterval(()=>{
       if(!this.isPaused){
         this.next();
       }
-    }, 2000);*/
+    }, 2000);
   }
 
   next(){
     let items = this.carousel.nativeElement.querySelectorAll('.carousel-item');
     let primero = items[0];
-    this.estiloCarousel = {
-      "marginLeft":"-67%",
-      "transition":"all 0.5s"
-    }
-    setTimeout(()=>{
+    if(window.innerWidth <= 480){
       this.estiloCarousel = {
-        "transition":"none",
-        "marginLeft":"-33.5%"
+        "marginLeft":"-200%",
+        "transition":"all 0.5s"
       }
-      this.carousel.nativeElement.insertAdjacentElement('beforeend', primero);
-    }, 500);
+      setTimeout(()=>{
+        this.estiloCarousel = {
+          "transition":"none",
+          "marginLeft":"-100vw"
+        }
+        this.carousel.nativeElement.insertAdjacentElement('beforeend', primero);
+      }, 500);
+    }else if(window.innerWidth <= 768){
+      this.estiloCarousel = {
+        "marginLeft":"-100%",
+        "transition":"all 0.5s"
+      }
+      setTimeout(()=>{
+        this.estiloCarousel = {
+          "transition":"none",
+          "marginLeft":"-50vw"
+        }
+        this.carousel.nativeElement.insertAdjacentElement('beforeend', primero);
+      }, 500);
+    }else{
+      this.estiloCarousel = {
+        "marginLeft":"-67%",
+        "transition":"all 0.5s"
+      }
+      setTimeout(()=>{
+        this.estiloCarousel = {
+          "transition":"none",
+          "marginLeft":"-33.333vw"
+        }
+        this.carousel.nativeElement.insertAdjacentElement('beforeend', primero);
+      }, 500);
+    }
   }
 
   prev(){
     let items = this.carousel.nativeElement.querySelectorAll('.carousel-item');
     let ultimo = items[items.length-1];
-    this.estiloCarousel = {
-      "marginLeft":"0%",
-      "transition":"all 0.5s"
-    }
-    setTimeout(()=>{
+    if(window.innerWidth <= 480){
       this.estiloCarousel = {
-        "transition":"none",
-        "marginLeft":"-33.5%"
+        "marginLeft":"0%",
+        "transition":"all 0.5s"
       }
-      this.carousel.nativeElement.insertAdjacentElement('afterbegin', ultimo);
-    }, 500);
+      setTimeout(()=>{
+        this.estiloCarousel = {
+          "transition":"none",
+          "marginLeft":"-100vw"
+        }
+        this.carousel.nativeElement.insertAdjacentElement('afterbegin', ultimo);
+      }, 500);
+    }else if(window.innerWidth <= 768){
+      this.estiloCarousel = {
+        "marginLeft":"0%",
+        "transition":"all 0.5s"
+      }
+      setTimeout(()=>{
+        this.estiloCarousel = {
+          "transition":"none",
+          "marginLeft":"-50vw"
+        }
+        this.carousel.nativeElement.insertAdjacentElement('afterbegin', ultimo);
+      }, 500);
+    }else{
+      this.estiloCarousel = {
+        "marginLeft":"0%",
+        "transition":"all 0.5s"
+      }
+      setTimeout(()=>{
+        this.estiloCarousel = {
+          "transition":"none",
+          "marginLeft":"-33.333vw"
+        }
+        this.carousel.nativeElement.insertAdjacentElement('afterbegin', ultimo);
+      }, 500);
+    }
   }
   
   pause(){
-    /*if(this.isPaused){
-      this.isPaused = false;
-    }else{*/
       this.isPaused = true;
-    //}
   }
 
   play(){
     this.isPaused = false;
-    console.log(this.isPaused);  }
+  }
+  
+  startX(e:any){
+    this.xActual = e.touches[0].clientX;
+  }
+  
+  endX(e:any){
+    var xFinal = e.changedTouches[0].clientX;
+    if(this.xActual > xFinal+5){
+      console.log(this.xActual+" Final: "+xFinal);
+      this.next();
+      this.isPaused = true;
+   }else if(this.xActual < xFinal-5){
+      console.log(this.xActual+" Final: "+xFinal);
+      this.prev();
+      this.isPaused = true;
+   }
+  }
   /*ngOnInit(): void {
   }*/
-
 }
