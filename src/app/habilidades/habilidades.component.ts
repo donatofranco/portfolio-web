@@ -10,12 +10,12 @@ export class HabilidadesComponent implements AfterViewInit {
   xActual:number = 0;
 
   slides = [
-    {img: "../../assets/img/html.png", name: "HyperText Markup Language", atl: "HTML"},
-    {img: "../../assets/img/css.png", name: "Cascading Style Sheets", alt: "CSS"},
-    {img: "../../assets/img/js2.png", name: "JavaScript", alt: "JS"},
-    {img: "../../assets/img/angular.png", name: "Angular", alt: "angular"},
-    {img: "../../assets/img/java.png", name: "Java", alt: "Java"},
-    {img: "../../assets/img/sql.png", name: "Structured Query Language", alt:"SQL"}
+    {img: "../../assets/img/html.webp", name: "HyperText Markup Language", atl: "HTML"},
+    {img: "../../assets/img/css.webp", name: "Cascading Style Sheets", alt: "CSS"},
+    {img: "../../assets/img/js.webp", name: "JavaScript", alt: "JS"},
+    {img: "../../assets/img/angular.webp", name: "Angular", alt: "angular"},
+    {img: "../../assets/img/java.webp", name: "Java", alt: "Java"},
+    {img: "../../assets/img/sql.webp", name: "Structured Query Language", alt:"SQL"}
   ];
   
   @ViewChild("carousel") carousel!: ElementRef;
