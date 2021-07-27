@@ -1,7 +1,3 @@
-$blacky: #1e1e1e;
-$blackyOp: #1e1e1e3b;
-$ivory: #FFFFF0;
-
 .contacto {
     display: flex;
     flex-direction: column;
@@ -14,7 +10,7 @@ $ivory: #FFFFF0;
     display: flex;
     position: absolute;
     text-align: center;
-    color: $ivory;
+    color: var(--ivory);
     top: 7.5vh;
     align-self: center;
     font-size: 7vh;

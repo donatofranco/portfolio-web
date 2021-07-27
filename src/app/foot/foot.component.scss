@@ -1,12 +1,10 @@
-$blacky: #1e1e1e;
-
 .foot{
     display: flex;
     height: 20px;
     justify-content: center;
-    background-color: $blacky;
+    background-color: var(--blacky);
     padding: 1em;
-    color: whitesmoke;
+    color: var(--ivory);
     font-size: 1.2em;
 }
 

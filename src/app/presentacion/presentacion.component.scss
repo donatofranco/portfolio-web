@@ -1,14 +1,10 @@
-$blacky: #1e1e1e;
-$blackyOp: rgba(30, 30, 30, 0.3);
-$cyan: #00FFFF;
 $cyanOp: rgba(0, 255, 255, 0.3);
-$ivory: #FFFFF0;
 
 .presentacion{
     display: flex;
     background-image: url(../../assets/img/code3.png);
     background-size: cover;
-    box-shadow: 0 0 5px 5px $blacky inset;
+    box-shadow: 0 0 5px 5px var(--blacky) inset;
     border-radius: 2vw;
     height: 100vh;
     justify-content: center;
@@ -35,8 +31,8 @@ $ivory: #FFFFF0;
 }
 
 .presentacion-info{
-    color: $ivory;
-    text-shadow: 2px 2px 0px $blacky, 1px 1px 2px $blacky, -1px -1px 2px $cyan;
+    color: var(--ivory);
+    text-shadow: 2px 2px 0px var(--blacky), 1px 1px 2px var(--blacky), -1px -1px 2px cyan;
     width: 50vw;
 }
 
@@ -54,11 +50,11 @@ $ivory: #FFFFF0;
 
 .cv-btn{
     display: inline;
-    color: $ivory;
+    color: var(--ivory);
     padding: 1.5vw;
     font-size: 5vw;
     letter-spacing: 8px;
-    border: solid $blacky 3px;
+    border: solid var(--blacky) 3px;
     border-radius: 15px;
     backdrop-filter: blur(10px);
     cursor: pointer;
@@ -66,11 +62,11 @@ $ivory: #FFFFF0;
 }
 
 .cv-btn:hover{
-    color: $blacky;
-    border-color: $cyan;
+    color: var(--blacky);
+    border-color: cyan;
     background-color: $cyanOp;
-    text-shadow: 2px 2px 0px $ivory, 1px 1px 2px $ivory, -1px -1px 2px $cyan;
-    box-shadow: 0 0 15px 0px $cyan;
+    text-shadow: 2px 2px 0px var(--ivory), 1px 1px 2px var(--ivory), -1px -1px 2px cyan;
+    box-shadow: 0 0 15px 0px cyan;
     transform: scale(1.1);
 }
 

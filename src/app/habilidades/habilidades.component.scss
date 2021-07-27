@@ -1,11 +1,9 @@
-$ivory: #FFFFF0;
-
 .habilidades{
     display: flex;
     justify-content: center;
     flex-direction: column;
-    color: $ivory;
-    background-color: rgba(0, 0, 0, 0);
+    color: var(--ivory);
+    background-color: transparent;
     overflow: hidden;
     position: relative;
     height: 100vh;
@@ -28,10 +26,6 @@ $ivory: #FFFFF0;
     margin: auto;
     margin-left: -33.333vw;
 } 
-
-.carousel-item {
-    
-}
 
 .carousel-item img{
     width: 33.333vw;
@@ -62,7 +56,7 @@ $ivory: #FFFFF0;
 }
 
 .carousel-item:hover img{
-    box-shadow: 0 0 5px 0px whitesmoke;
+    box-shadow: 0 0 5px 0px var(--ivory);
     opacity: 0.3;
     transform: scale(0.9, 0.9) translateY(-5vh);
 }
@@ -81,7 +75,7 @@ $ivory: #FFFFF0;
     display: flex;
     z-index: 1;
     align-items: center;
-    background: rgba(0, 0, 0, 0.0);
+    background: transparent;
     height: 33.333vw;
     font-size: 8vw;
     opacity: 0.5;
@@ -103,15 +97,6 @@ i{
 i:hover{
     transform: scale(1.05, 1.05);
     text-shadow: 0px 4px 4px rgba(0, 255, 255, 0.7);
-}
-
-@media (max-width: 1024px) {
-    .habilidades{
-        //height: 700;
-    }
-    .habilidades h1{
-        //font-size: 5em;
-    }
 }
 
 @media (max-width: 768px) {
