@@ -1,4 +1,7 @@
 .nav{
+    top: 0;
+    position: fixed;
+    width: 100%;
     width: 100vw;  
     display: flex;
     margin: 0;
@@ -47,9 +50,8 @@ a{
     height: 5vh;
     align-items: center;
     margin: 0.5vw;
-    //padding: 0.5em;
+    padding: 0 5px;
     color: var(--blacky);
-    border: none;
     border-radius: 2vh;
     cursor: pointer;
     font-weight: bold;
