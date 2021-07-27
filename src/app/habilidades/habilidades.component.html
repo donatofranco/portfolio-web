@@ -2,9 +2,9 @@
     <h1>Habilidades</h1>
     <div class="carousel" #carousel [ngStyle]="estiloCarousel" >
         <div class="carousel-item" id="item{{i}}" #item{{i}} *ngFor="let slide of slides; let i = index" (mouseover)="pause()" (mouseout)="play()" (touchstart)="pause();startX($event);" (touchend)="play();endX($event);">
-            <img id="img{{i}}" #img{{i}} src={{slide.img}} alt={{slide.nombre}} />
+            <img id="img{{i}}" #img{{i}} src={{slide.img}} alt={{slide.alt}} />
             <div class="info-img">
-                <p>{{slide.nombre}}</p>
+                <p>{{slide.name}}</p>
             </div>
         </div>
         <div class="btn-derecha btn" (click)="next()" (mouseover)="pause()" (mouseout)="play()"><i class="fas fa-chevron-right"></i></div>
