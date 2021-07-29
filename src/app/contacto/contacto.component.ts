@@ -8,9 +8,9 @@ import { Component, OnInit } from '@angular/core';
 export class ContactoComponent implements OnInit {
 
   mediaImg = [
-    {url: "mailto:francoedonato@gmail.com", nombre: "gMail", class:"fas fa-envelope-square"},
-    {url: "https://www.linkedin.com/in/franco-donato-71107b192/", nombre: "LinkedIn", class:"fab fa-linkedin"},
-    {url: "https://github.com/donatofranco", nombre: "GitHub", class:"fab fa-github-square"}
+    {url: "mailto:francoedonato@gmail.com", nombre: "gMail", class:"icon-mail-squared"},
+    {url: "https://www.linkedin.com/in/franco-donato-71107b192/", nombre: "LinkedIn", class:"icon-linkedin-squared"},
+    {url: "https://github.com/donatofranco", nombre: "GitHub", class:"icon-github-squared"}
     //{img: "../../assets/img/fb.png", nombre: "Facebook", class:"fab fa-facebook-square"}
   ];
 
