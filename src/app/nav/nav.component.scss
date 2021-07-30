@@ -19,11 +19,11 @@
     align-self: center;
     font-weight: bold;
     font-size: 5vh;
-    border-right: 2px solid rgba(255,255,255,.75);
+    //border-right: 2px solid rgba(255,255,255,.75);
     overflow: hidden;
     cursor: pointer;
-    animation: typewriter 4s steps(13, start) 1s infinite alternate,
-              blinkTextCursor 500ms steps(44) infinite normal;
+    /*animation: typewriter 4s steps(13, start) 1s infinite alternate,
+              blinkTextCursor 500ms steps(44) infinite normal;*/
 }
 
 .nav-title p{
@@ -70,13 +70,13 @@ a{
 //animaciones
 
 @keyframes typewriter{
-    from{width: 0;}
-    to{width: 8.15em;}
+    from{transform: matrix(0, 0, 0, 1, 0, 0);}
+    to{transform: matrix(1, 0, 0, 1, 0, 0);}
 }
 
 @keyframes blinkTextCursor{
-from{border-right-color: rgba(255,255,255,.75);}
-to{border-right-color: transparent;}
+    from{border-right-color: rgba(255,255,255,.75);}
+    to{border-right-color: transparent;}
 }
 
 .nav-menu{

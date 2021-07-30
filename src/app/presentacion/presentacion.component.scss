@@ -71,8 +71,8 @@ $cyanOp: rgba(0, 255, 255, 0.3);
 }
 
 @keyframes movePhoto {
-    0%{left: -100%;}
-    100%{left: 0%;}
+    0%{transform: translateX(-100%);}
+    100%{transform: translateX(0%);}
 }
 
 @keyframes floatingPhoto {

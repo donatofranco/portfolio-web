@@ -3,3 +3,4 @@
   for = "/*"
     [headers.values]
     Access-Control-Allow-Origin = "*"
+    cache-control = '''max-age=31536000'''
