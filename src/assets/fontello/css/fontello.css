@@ -24,7 +24,7 @@
   font-style: normal;
   font-weight: normal;
   speak: never;
-
+  margin: 0;
   display: inline-block;
   text-decoration: inherit;
   /*width: 1em;
@@ -37,7 +37,7 @@
   text-transform: none;
 
   /* fix buttons height, for twitter bootstrap */
-  line-height: 1em;
+  /*line-height: 1em;
 
   /* Animation center compensation - margins should be symmetric */
   /* remove if not needed */

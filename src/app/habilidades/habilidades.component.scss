@@ -77,7 +77,7 @@
     align-items: center;
     background: transparent;
     height: 33.333vw;
-    font-size: 8vw;
+    font-size: 7vw;
     opacity: 0.5;
     transition: 0.5s 0.3s;
 }
@@ -92,6 +92,8 @@
 
 i{
     cursor: pointer;
+    margin: 2px;
+    padding: 2px;
 }
 
 i:hover{
