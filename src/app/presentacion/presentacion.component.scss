@@ -39,13 +39,13 @@ $cyanOp: rgba(0, 255, 255, 0.3);
 .presentacion-info p{
     text-align: center;
     font-weight: bold;
-    font-size: 4vh;
+    font-size: 3vw;
 }
 
 .container-btn{
-    padding-top: 15vh;
     display: flex;
     justify-content: center;
+    transform: translateY(20px);
 }
 
 .cv-btn{
@@ -107,9 +107,6 @@ $cyanOp: rgba(0, 255, 255, 0.3);
         margin: auto;
         width: 90vw;
     }
-    .container-btn{
-        padding-top: 2vh;
-    }
  }
 
  @media (max-width: 768px) { 
@@ -117,11 +114,8 @@ $cyanOp: rgba(0, 255, 255, 0.3);
         width: 60%;
     }
     .presentacion-info p{
-        font-size: 3.2vh;
+        font-size: 3.5vw;
         text-align: center;
-    }
-    .container-btn{
-        padding-top: 5vh;
     }
     .cv-btn{
         font-size: 8vw;
@@ -141,8 +135,5 @@ $cyanOp: rgba(0, 255, 255, 0.3);
     .presentacion-info p{
         font-size: 5vw;
         text-align: center;
-    }
-    .cv-btn{
-        padding: 1.5vh;
     }
  }
